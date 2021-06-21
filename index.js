@@ -8,6 +8,7 @@ const userName=chalk.green(
 const dob = readlineSync.question(
             chalk.magenta("Hi, ") + userName+"!\n"+chalk.cyan("Please enter your ")+chalk.yellow("date of birth in (dd/mm/yyyy) format: ")
             )
+            
 const dobArray=dob.split("/")
 const birthYear=Number(dobArray[2])
 function leapYear(birthYear){
@@ -15,7 +16,7 @@ function leapYear(birthYear){
         if(birthYear%100===0){
             if(birthYear%400===0){
                 console.log(
-                    chalk.magenta("Your Birth Year: ") + chalk.yellow(birthYear) + chalk.green("\nIt is a leap year") + chalk.bgBlack(chalk.greenBright("\nYou are born in Leap Year"))
+                    chalk.magenta("Your Birth Year: ") + chalk.yellow(birthYear) + chalk.green("\nIt is a leap year") + chalk.bgBlack(chalk.greenBright("\nYay! You are born in Leap Year\nShare this on your social media"))
                 )
             }
             else{
@@ -26,7 +27,7 @@ function leapYear(birthYear){
         }
         else{
             console.log(
-                chalk.magenta("Your Birth Year: ") + chalk.yellow(birthYear) + chalk.green("\nIt is a leap year") + chalk.bgBlack(chalk.greenBright("\nYou are born in Leap Year"))
+                chalk.magenta("Your Birth Year: ") + chalk.yellow(birthYear) + chalk.green("\nIt is a leap year") + chalk.bgBlack(chalk.greenBright("\nYay! You are born in Leap Year\nShare this on your social media"))
             )
         }
     }
