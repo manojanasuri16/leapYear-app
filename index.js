@@ -7,10 +7,10 @@ const userName=chalk.green(
 )
 const dob = readlineSync.question(
             chalk.magenta("Hi, ") + userName+"!\n"+chalk.cyan("Please enter your ")+chalk.yellow("date of birth in (dd/mm/yyyy) format: ")
-            )
+        )        
             
 const dobArray=dob.split("/")
-const birthYear=Number(dobArray[2])
+const birthYear=parseInt(dobArray[2])
 function leapYear(birthYear){
     if(birthYear%4===0){
         if(birthYear%100===0){
@@ -38,5 +38,3 @@ function leapYear(birthYear){
     }
 }
 leapYear(birthYear)
-
-
